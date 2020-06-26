@@ -26,4 +26,5 @@ jobs:
     - name: Publish 
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+        PROJECT_FILE_PATH: src/Nubizsoft.Rokuyo/Nubizsoft.Globalization.RokyuoCalendar.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
