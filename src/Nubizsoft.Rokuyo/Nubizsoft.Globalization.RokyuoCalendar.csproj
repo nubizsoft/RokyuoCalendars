@@ -3,11 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>Nubizsoft.Globalization.RokuyoCalendars</PackageId>
+    <Version>1.0-beta1</Version>
     <PackageVersion>1.0-beta1</PackageVersion>
     <Authors>Nubizsoft</Authors>
     <Copyright>© Nubizsoft. All rights reserved.</Copyright>
     <Owners>Nubizsoft</Owners>
     <Description>Provides classes for performing rokuyo day calculations using JapananeLunisolarCalendar</Description>
+    <ReleaseVersion>1.0-beta1</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
 
 </Project>
