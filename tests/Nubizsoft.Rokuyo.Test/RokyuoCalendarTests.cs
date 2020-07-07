@@ -32,13 +32,13 @@ namespace Nubizsoft.Globalization.Test
         }
 
         [DataTestMethod]
-        [DataRow("06/07/2020", RokuyoDay.Taian)]
-        [DataRow("05/07/2018", RokuyoDay.Taian)]
+        [DataRow("06/07/2020", RokuyoDay.Tomobiki)]
+        [DataRow("05/07/2018", RokuyoDay.Tomobiki)]
         public void TestSpecificDate(string date, RokuyoDay rokuyoDay)
         {
             CultureInfo provider = CultureInfo.InvariantCulture;
             var rokuyoCalendar = new RokuyoCalendar();
-            Assert.AreEqual(rokuyoDay, rokuyoCalendar.GetRokuyo(DateTime.ParseExact(date, "dd/mm/yyyy", provider)));
+            Assert.AreEqual(rokuyoDay, rokuyoCalendar.GetRokuyo(DateTime.ParseExact(date, "dd/MM/yyyy", provider)));
         }
 
 
