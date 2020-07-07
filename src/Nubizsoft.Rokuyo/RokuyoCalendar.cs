@@ -27,8 +27,8 @@ namespace Nubizsoft.Globalization
         {
             var newYearDate = this.AddDays(time, 1 - this.GetDayOfYear(time));
             var leapMonth = this.GetLeapMonth(this.GetYear(newYearDate), this.GetEra(newYearDate));
-            var month = this.GetMonth(time);
-            return 0 < leapMonth && leapMonth < month ? month - 1 : month;
+            var oldMonth = this.GetMonth(time);
+            return (0 < leapMonth) && (leapMonth <= oldMonth) ? oldMonth - 1 : oldMonth;
         }
 
     }

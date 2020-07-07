@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Nubizsoft.Globalization.Test
@@ -29,5 +30,18 @@ namespace Nubizsoft.Globalization.Test
             Assert.AreEqual(RokuyoDay.Sakimake, rokuyoCalendar.GetRokuyo(new DateTime(2020, 1, 27)));
             Assert.AreEqual(RokuyoDay.Butsumetsu, rokuyoCalendar.GetRokuyo(new DateTime(2020, 1, 28)));
         }
+
+        [DataTestMethod]
+        [DataRow("06/07/2020", RokuyoDay.Taian)]
+        [DataRow("05/07/2018", RokuyoDay.Taian)]
+        public void TestSpecificDate(string date, RokuyoDay rokuyoDay)
+        {
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            var rokuyoCalendar = new RokuyoCalendar();
+            Assert.AreEqual(rokuyoDay, rokuyoCalendar.GetRokuyo(DateTime.ParseExact(date, "dd/mm/yyyy", provider)));
+        }
+
+
+
     }
 }
